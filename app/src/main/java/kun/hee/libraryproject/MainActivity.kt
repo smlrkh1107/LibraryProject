@@ -9,14 +9,16 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setValues()
+        setupEvents()
     }
 
     override fun setupEvents() {
 
     }
 
-    override fun setValues() { //http로 시작하는 거 가져와보자
-        Glide.with(mContext).load("https://lh3.googleusercontent.com/proxy/nqdykTCq0qPvX7kSoNkvbPUb2QAjhBcQcYkPSByDvZV8ivoKXgfT8uAIvsiJpukSN5lAdIk6jRWNZcoP-TgW9SyeKrPO5m2OwfPcwIUHMzeKtXlnCw").into(profileImg)
+    override fun setValues() { //https로 시작하는 거 가져와보자
+        Glide.with(mContext).load("https://www.futurekorea.co.kr/news/photo/201909/120628_121827_382.jpg").into(profileImg)
 
         //resourceId로 하면 R.ImageView. 딩가딩가 고
 
